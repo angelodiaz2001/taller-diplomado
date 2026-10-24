@@ -1,0 +1,1 @@
+Hazme una función para registrar la entrada de un vehículo.
