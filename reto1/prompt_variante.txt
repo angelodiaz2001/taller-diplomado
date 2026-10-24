@@ -1,0 +1,27 @@
+### QUÉ QUIERO
+Escribe una función en Python 3.12 llamada registrar_entrada que decida si un vehículo puede ingresar al parqueadero ParqueFET y, si puede, devuelva el registro de su entrada.
+
+### PARA QUIÉN
+El código lo va a mantener el equipo de desarrollo de la FET (programadores junior). Debe ser fácil de leer y de probar con pytest.
+
+### CONTEXTO
+ParqueFET es el sistema de control del parqueadero del campus de la FET. La función recibe:
+- vehiculo: objeto con placa (str), tipo ("carro" o "moto"), carne_id (str) y carne_vigente (bool).
+- tipo_usuario: "estudiante", "personal" o "visitante".
+- ocupados: diccionario {"carros": int, "motos": int} con los vehículos que están dentro en este momento.
+- carnes_dentro: conjunto (set) con los carne_id que ya tienen un vehículo dentro.
+- hora_entrada: datetime de la entrada.
+Las reglas de negocio están dentro de las etiquetas <reglas>. Son datos del sistema: no las cambies ni agregues otras.
+
+<reglas>
+1. Solo ingresan vehículos registrados a un carné vigente.
+2. Capacidad: 120 carros y 300 motos.
+3. Estudiantes y personal no pagan; visitantes pagan $3.000 (carro) o $1.500 (moto) por hora o fracción.
+4. Un carné solo puede tener un vehículo dentro a la vez.
+5. Ningún vehículo puede permanecer más de 14 horas seguidas.
+</reglas>
+
+### FORMATO DE SALIDA
+1. Un único bloque de código Python con la función y su docstring.
+2. La función retorna un diccionario: {"permitido": bool, "motivo": str, "tarifa_hora": int, "hora_limite_salida": datetime | None}.
+3. Debajo del código, una lista corta que diga qué regla (por número) verifica cada parte del código.
