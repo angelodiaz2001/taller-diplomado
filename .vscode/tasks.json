@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Reto 1 - prompt malo",
+      "type": "shell",
+      "command": "ollama run qwen-demo --think=false --nowordwrap < reto1\\prompt_malo.txt",
+      "options": { "shell": { "executable": "cmd.exe", "args": ["/d", "/c"] } },
+      "presentation": { "panel": "dedicated", "clear": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Reto 1 - prompt formula",
+      "type": "shell",
+      "command": "ollama run qwen-demo --think=false --nowordwrap < reto1\\prompt_formula.txt",
+      "options": { "shell": { "executable": "cmd.exe", "args": ["/d", "/c"] } },
+      "presentation": { "panel": "dedicated", "clear": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Reto 1 - prompt variante",
+      "type": "shell",
+      "command": "ollama run qwen-demo --think=false --nowordwrap < reto1\\prompt_variante.txt",
+      "options": { "shell": { "executable": "cmd.exe", "args": ["/d", "/c"] } },
+      "presentation": { "panel": "dedicated", "clear": true },
+      "problemMatcher": []
+    }
+  ]
+}
